@@ -1,0 +1,251 @@
+{
+  "intents": [
+    {
+      "intent": "greeting",
+      "examples": [
+        {
+          "text": "Hello"
+        },
+        {
+          "text": "Hey"
+        },
+        {
+          "text": "Hi"
+        },
+        {
+          "text": "Welcome"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "olympiad",
+      "examples": [
+        {
+          "text": "local"
+        },
+        {
+          "text": "olympiad"
+        },
+        {
+          "text": "registering"
+        }
+      ],
+      "description": "olympiad"
+    },
+    {
+      "intent": "thank",
+      "examples": [
+        {
+          "text": "thanks"
+        },
+        {
+          "text": "thank you"
+        }
+      ],
+      "description": "thanks"
+    }
+  ],
+  "entities": [
+    {
+      "entity": "Fighting_robot",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "show me",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "services",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "service",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_10_1625616323930",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Thank You!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#thank",
+      "dialog_node": "node_10_1625616323930",
+      "previous_sibling": "node_1_1625615749717"
+    },
+    {
+      "type": "standard",
+      "title": "video of fighting robot",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "You can watch on this link:\nhttps://www.youtube.com/watch?v=cR-YlZ9NdIA"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "@Fighting_robot",
+      "dialog_node": "node_1_1625612404625",
+      "previous_sibling": "node_5_1625611603369"
+    },
+    {
+      "type": "standard",
+      "title": "olympiad",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Here the local olympiad:\nhttps://wrosaudi.com/home"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#olympiad",
+      "dialog_node": "node_1_1625615749717",
+      "previous_sibling": "node_1_1625612404625"
+    },
+    {
+      "type": "standard",
+      "title": "greeting",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Greetings. Ask me about my services!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#greeting",
+      "dialog_node": "node_2_1625608019791",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "services",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I'm the fighting robot control panel.\nI can show you how robotics fight.\nI can share with you how to registering in the local olympiad of fighting robots.\nor we can just have fun!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "@services",
+      "dialog_node": "node_5_1625611603369",
+      "previous_sibling": "node_2_1625608019791"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Welcome"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "intent_classification": {
+      "training_backend_version": "v2"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "Speaking",
+  "language": "en",
+  "description": ""
+}
