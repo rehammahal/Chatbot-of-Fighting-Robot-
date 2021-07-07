@@ -21,5 +21,8 @@ IBM Watson
 
 لمساعدة مستخدمي مشروع واجهة التحكم للتعرف لى المزيد حول روبوت المبارزة.
 
+لمشاهدة روبوت المحادثة : https://rehammahal.github.io/Chatbot-of-Fighting-Robot-/
 
-https://rehammahal.github.io/Chatbot-of-Fighting-Robot-/
+ملاحظة: تم تصميم الواجهة لتكون متجاوبة مع عرض المتصفح والهواتف الذكية
+
+
