@@ -4,7 +4,7 @@ This is my third task in the IoT department during my summer training at Smart M
 
 This task was about creating a chatbot assistant for the fighting robotic arm project.
 
-I created this chatbot using IBM Watson, to assist user how  uses robotic arm control panel. also, to know more about fighting robot.
+I created this chatbot using IBM Watson, to assist user who uses robotic arm control panel to know more about fighting robot.
 
 Kindly check out the chatbot by clicking on the following link: https://rehammahal.github.io/Chatbot-of-Fighting-Robot-/
 
@@ -19,9 +19,9 @@ _____________________________________________________
 
 IBM Watson
 
-لمساعدة مستخدمي مشروع واجهة التحكم للتعرف لى المزيد حول روبوت المبارزة.
+لمساعدة مستخدمي مشروع واجهة التحكم للتعرف على المزيد حول روبوت المبارزة.
 
-لمشاهدة روبوت المحادثة : https://rehammahal.github.io/Chatbot-of-Fighting-Robot-/
+لمشاهدةروبوت المحادثة : https://rehammahal.github.io/Chatbot-of-Fighting-Robot-/
 
 ملاحظة: تم تصميم الواجهة لتكون متجاوبة مع عرض المتصفح والهواتف الذكية
 
